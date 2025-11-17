@@ -1,0 +1,26 @@
+{
+  "high_dimensional_classification": {
+    "winning_models": ["LightGBM", "XGBoost"],
+    "feature_engineering": ["variance_threshold", "pca"],
+    "validation": "stratified_kfold",
+    "success_rate": 0.85
+  },
+  "tabular_regression": {
+    "winning_models": ["LightGBM", "XGBoost", "CatBoost"],
+    "feature_engineering": ["outlier_removal", "interaction_terms"],
+    "validation": "kfold",
+    "success_rate": 0.78
+  },
+  "time_series": {
+    "winning_models": ["LightGBM", "XGBoost", "Prophet"],
+    "feature_engineering": ["lag_features", "rolling_stats"],
+    "validation": "time_series_split",
+    "success_rate": 0.82
+  },
+  "nlp_classification": {
+    "winning_models": ["BERT", "LightGBM"],
+    "feature_engineering": ["tfidf", "embeddings"],
+    "validation": "stratified_kfold",
+    "success_rate": 0.80
+  }
+}
